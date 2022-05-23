@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+  margin: 0;
+  pading: 0;
+  box-sizing: border-box;
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+}
+main::-webkit-scrollbar-button {
+    border: 1px #FF0000 dashed;
+}
+main::-webkit-scrollbar-track {
+    background: #CCCCCC;
+}
+main::-webkit-scrollbar-track-piece {
+    background: #CCCCCC;
+}
+main::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 5px;
+}
+main::-webkit-scrollbar-corner {
+    background: #FF0000;
+    border-radius: 5px;
+}
+.form-comment textarea::-webkit-resizer {
+    border: 1px #FF0000 dashed;
+}
+
+body{
+  font-family: sans-serif;
+  color: rgb(220,220,220);
+  padding: 50px;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.warning{
+  color: rgb(62,148,236);
+}
+
+.st_viewport{
+  max-height: 500px;
+  overflow: auto;
+}
+
+._rank{
+  min-width: 180px;
+}
+._id{
+  min-width: 60px;
+}
+._name{
+  min-width: 110px;
+}
+._surname{
+  min-width: 130px;
+}
+._year{
+  min-width: 120px;
+}
+._section{
+  min-width: 120px;
+}
+._section2{
+  min-width: 120px;
+}
+._section3{
+  min-width: 120px;
+}
+._section4{
+  min-width: 120px;
+}
+
+pre{
+  overflow: auto;
+}
+
+/** Sticky table styles **/
+.st_viewport{
+  background-color: rgb(155 162 168);
+  color: rgb(0 0 0);
+  margin: 20px 0;
+}
+
+/* ##   header */
+.st_table_header{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: rgb(75 77 81);
+  color: #f1f1f1;
+}
+.st_table_header h2{
+  font-size: larger;
+  font-weight: 400;
+  margin: 0 20px;
+  padding: 10px 0 0;
+}
+.st_table_header .st_row{
+  color: #f1f1f1;
+}
+
+/* ##  table */
+.st_table{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* #   row */
+.st_row{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+.st_table .st_row:nth-child(even){
+  background-color: rgba(0,0,0, .1)
+}
+
+/* #   column */
+.st_column{
+  padding: 10px 20px;
+}
+</style>
+</head>
+<body>
+
+<main class="st_viewport" style="border-radius: 9px;">
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+    <h2>ÍNDICES</h2>
+      <div class="st_row">
+        <div class="st_column _rank">Nome</div>
+        <div class="st_column _name">Valor</div>
+        <div class="st_column _surname">Variação</div>
+        <div class="st_column _year">Var%</div>
+        <div class="st_column _section">Abertura</div>
+        <div class="st_column _section2">Máx</div>
+        <div class="st_column _section3">Mín</div>
+        <div class="st_column _section4">Anterior</div>
+      </div>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">S&P 500</div>
+        <div class="st_column _name">John</div>
+        <div class="st_column _surname">Doe</div>
+        <div class="st_column _year">1973</div>
+        <div class="st_column _section">Teste</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">US 100</div>
+        <div class="st_column _name">Max</div>
+        <div class="st_column _surname">Luke</div>
+        <div class="st_column _year">1971</div>
+        <div class="st_column _section">USA</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Jonas</div>
+        <div class="st_column _surname">Kunze</div>
+        <div class="st_column _year">2015</div>
+        <div class="st_column _section">Germany</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Janina</div>
+        <div class="st_column _surname">Endres</div>
+        <div class="st_column _year">1955</div>
+        <div class="st_column _section">Belgium</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Lena</div>
+        <div class="st_column _surname">Eifel</div>
+        <div class="st_column _year">1996</div>
+        <div class="st_column _section">Germany</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+    </div>
+  </div>
+  <div class="st_wrap_table" data-table_id="1">
+    <header class="st_table_header">
+      <h2>FUTUROS</h2>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Jonas</div>
+        <div class="st_column _surname">Kunze</div>
+        <div class="st_column _year">2015</div>
+        <div class="st_column _section">Germany</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Janina</div>
+        <div class="st_column _surname">Endres</div>
+        <div class="st_column _year">1955</div>
+        <div class="st_column _section">Belgium</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Lena</div>
+        <div class="st_column _surname">Eifel</div>
+        <div class="st_column _year">1996</div>
+        <div class="st_column _section">Germany</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">John</div>
+        <div class="st_column _surname">Doe</div>
+        <div class="st_column _year">1973</div>
+        <div class="st_column _section">Germany</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Max</div>
+        <div class="st_column _surname">Luke</div>
+        <div class="st_column _year">1971</div>
+        <div class="st_column _section">USA</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">Janina</div>
+        <div class="st_column _surname">Endres</div>
+        <div class="st_column _year">1955</div>
+        <div class="st_column _section">Belgium</div>
+        <div class="st_column _section2">1</div>
+        <div class="st_column _section3">2</div>
+        <div class="st_column _section4">3</div>
+      </div>
+    </div>
+  </div>
+ </main>
+</body>
+</html>
